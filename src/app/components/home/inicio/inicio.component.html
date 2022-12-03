@@ -1,0 +1,45 @@
+<h1 class="title">Sistema de Gestión de usuarios</h1>
+
+<div class="container-baner mt-5">
+    <div class="slider">
+        <ul>
+          <li *ngFor="let item of Baners">
+            <img src={{item.img}} alt="" class="img-fluid">
+          </li>
+        </ul>
+    </div>
+</div><!-- container //  -->
+
+
+<div class="container-mision">
+  <mat-card>
+    <mat-card-title class="mision">Misión</mat-card-title>
+    <mat-card-content>
+      <mat-card-header>
+        <img src="https://www.100negocios.com/wp-content/uploads/2017/02/Misi%C3%B3n.png" mat-card-image style="width:120px;">
+        <p>Esta Web site se encargara de facilitar la gestión de usuarios de manera correcta y rapida.La Empresa, Los Seniors,
+          te brinda una herramienta fundamental para que puedas gestionar los usuarios con lod que cuentes.Además de tener 
+          multiples herramientas como la edición,eliminación y la opcióSn de introducir nuevos usuarios a traves de un formulario
+        </p>
+      </mat-card-header>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<h1 style="text-align: center;" class="title-integrantes">Integrantes de Equipo</h1>
+<div class="container-integrantes">
+    <div class="container-card" *ngFor="let integrante of integrantes">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="icon-perfil"><img mat-card-image src={{integrante.imagen}}></div>
+              <mat-card-title>{{integrante.nombre}}</mat-card-title>
+              <mat-card-subtitle>{{integrante.cargo}}</mat-card-subtitle>
+            </mat-card-header>
+            <img class="img-body" mat-card-image src={{integrante.imagen}} alt="Photo of a Shiba Inu">
+          </mat-card>
+    </div>
+</div>
+
+
+  

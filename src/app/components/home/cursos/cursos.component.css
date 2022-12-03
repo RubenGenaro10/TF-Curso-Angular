@@ -1,0 +1,33 @@
+.body{
+    font-family: Robot, Helvetica, Arial;
+    background: rgb(226, 219, 219);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card{
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000033;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin: 1.5rem 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    max-width: 800px;
+    margin-left: 20%;
+  }
+  .card img{
+    width: 150px;
+  }
+
+  @media screen and (max-width: 685px){
+    .card{
+        margin-left: 0;
+        width: 100%;
+    }
+  }
+  

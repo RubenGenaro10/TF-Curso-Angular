@@ -1,0 +1,55 @@
+.container{
+    padding: 15px;
+    position: relative;
+}
+mat-card{
+    margin-bottom: 15px;
+}
+.sub_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-container {
+    position: relative;
+    overflow: auto;
+}
+table {
+    width: 100%;
+}
+.mat-column-id{
+    max-width: 50px;
+}
+.mat-column-name,
+.mat-column-username,
+.mat-column-website {
+    max-width: 100px;
+}
+
+.mat-column-email,
+.mat-column-phone {
+    max-width: 150px;
+    min-width: 150px;
+}
+.btn-control{
+    display: flex;
+    justify-content: space-around;
+}
+.btn-control a{
+    cursor: pointer;
+}
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+.not-fount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.not-fount img{
+    width: 50px;
+}

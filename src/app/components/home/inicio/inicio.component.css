@@ -1,0 +1,120 @@
+.title {
+    font-size: 50px;
+    font-family: fantasy;
+    padding-top:50px ;
+    text-align: center;
+}
+p {
+   margin-top: 30px;
+   margin-left: 60px;
+   font-size: 20px;
+}
+mat-card-subtitle{
+    margin-bottom: 7px;
+    margin-top: 2px;
+}
+.title-integrantes{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: fantasy;
+    font-size: 24px;
+}
+.container-mision{
+    width: 90%;
+    margin: auto;
+    margin-top: 18px;
+}
+.mision{
+    margin-left: 80px;
+    margin-top: 5px;
+}
+.container-integrantes {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.container-card {
+    width: 300px;
+    padding: 8px;
+    margin-right:2px;
+
+}
+
+.icon-perfil img{
+    width: 40px;
+    height: 40px;
+
+}
+
+.img-body{
+    object-fit: cover;
+    height: 300px;
+}
+
+/*baner*/
+.mt-5 {
+    margin-top: 3rem;
+}
+.mb-5{
+    margin-bottom: 5rem;
+}
+.slider {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: slider 20s infinite alternate linear;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+    
+}
+
+.slider img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+@keyframes slider {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}

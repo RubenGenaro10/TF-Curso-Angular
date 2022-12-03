@@ -1,0 +1,14 @@
+.container__error{
+    max-width: 1300px;
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__error img{
+    width: 250px;
+}

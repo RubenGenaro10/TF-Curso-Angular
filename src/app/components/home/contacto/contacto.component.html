@@ -1,0 +1,47 @@
+<div class="contenedor">
+<mat-grid-list cols="2" rowHeight="100%">
+    <mat-grid-tile cols="1" rows="1" >
+        
+        <div class="body">
+        
+            <form [formGroup]="form" (ngSubmit)="ingresar()" class="login">
+                <img class="img-contact" src="https://www.lbtechhub.com/images/service/content.png" alt="" />
+                <h1>FORMULARIO DE CONTACTOS</h1>
+                <mat-form-field class="ancho" appearance="outline" >
+                    <mat-icon *ngIf="!form.get('nombre')!.errors" style="color: green;" matSuffix>check_circle</mat-icon>
+                    <mat-label>Nombre</mat-label>
+                    <input class="input" autocomplete="off" matInput placeholder="Ingrese su Nombre" formControlName="nombre" />
+                    
+                    <mat-hint *ngIf="form.get('nombre')!.touched && form.get('nombre')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    <mat-hint *ngIf="form.get('nombre')!.dirty && form.get('nombre')!.errors?.['minlength']" style="color: red;">Minimo 3 letras -</mat-hint>
+                    <mat-hint *ngIf=" form.get('nombre')!.errors?.['pattern']" style="color: red;">Caracter Invalido</mat-hint>
+                    
+                </mat-form-field>
+                <mat-form-field class="ancho" appearance="outline">
+                    <mat-label>Correo</mat-label>
+                    <input autocomplete="off" matInput placeholder="Ingrese su correo" formControlName="email"/>
+                    <mat-icon *ngIf="!form.get('email')!.errors" style="color: green;" matSuffix>check_circle</mat-icon>
+                    <mat-hint *ngIf="form.get('email')!.touched && form.get('email')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    <mat-hint *ngIf="form.get('email')!.dirty  && form.get('email')!.errors?.['pattern']" style="color: red;">ejemplo@email.com</mat-hint>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="ancho" appearance="outline">
+                    <mat-label>Mensaje</mat-label>
+                    <textarea  rows="5" autocomplete="off" matInput placeholder="Ingrese su mensaje" formControlName="textbox"></textarea>
+                    <mat-icon *ngIf="!form.get('textbox')!.errors" style="color: green;" matSuffix>check_circle</mat-icon>
+                    <mat-hint *ngIf="form.get('textbox')!.touched && form.get('textbox')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    <mat-hint *ngIf="form.get('textbox')!.errors?.['minlength']" style="color: red;">Minimo 10 palabras</mat-hint>
+                    <mat-hint *ngIf="form.get('textbox')!.errors?.['maxlength']"  style="color: red;">Maximo 300 palabras</mat-hint>
+                </mat-form-field>
+               
+               
+                <button type="submit" [disabled]="form.invalid" mat-raised-button class="ancho boton" color="primary">ENVIAR</button>
+              </form>
+         
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile cols="1" rows="1" class="imagen-container">
+        <img class="imagen" src="https://w0.peakpx.com/wallpaper/780/201/HD-wallpaper-motivation-coding-i-can-do-it-programing.jpg" alt="" >
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

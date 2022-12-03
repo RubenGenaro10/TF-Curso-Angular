@@ -1,0 +1,22 @@
+<div class="body">
+  <mat-spinner *ngIf="cargar" class="spinner" diameter="50"></mat-spinner>
+    <form *ngIf="!cargar" [formGroup]="form" (ngSubmit)="ingresar()" class="login">
+      <img src="./assets/img/usuario.png" alt="" />
+      <h1>Login</h1>
+      <mat-form-field class="ancho" appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input autocomplete="off" matInput placeholder="Ingrese su correo" formControlName="email"/>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint *ngIf="form.get('email')!.touched && form.get('email')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+          <mat-hint *ngIf="form.get('email')!.dirty && form.get('email')!.errors?.['pattern']" style="color: red;">example@email.com</mat-hint>
+        </mat-form-field>
+      <br>
+      <mat-form-field class="ancho" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input autocomplete="off" type="password" matInput placeholder="Ingrese su contraseña" formControlName="password"/>
+        <mat-icon matSuffix>password</mat-icon>
+        <mat-hint *ngIf="form.get('password')!.touched && form.get('password')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+      </mat-form-field>
+      <button type="submit" [disabled]="form.invalid" mat-raised-button class="ancho boton" color="primary">Ingresar</button>
+    </form>
+</div>

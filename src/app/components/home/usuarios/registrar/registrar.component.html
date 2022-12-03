@@ -1,0 +1,136 @@
+<div class="container">
+    <mat-card>
+        <form [formGroup]="formUsuario" (ngSubmit)="registrarUsuario()">
+        <mat-card-header>
+            <mat-card-title>Registro de usuario</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content >
+            <mat-grid-list cols="4" rowHeight="100px">
+                <mat-grid-tile [colspan]="4">
+                    <div class="subtitulo">Datos Del usuario: </div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="name"/>
+                        <mat-hint *ngIf="formUsuario.get('name')!.touched && formUsuario.get('name')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username"/>
+                        <mat-hint *ngIf="formUsuario.get('username')!.touched && formUsuario.get('username')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email"/>
+                        <mat-hint *ngIf="formUsuario.get('email')!.touched && formUsuario.get('email')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input matInput formControlName="phone"/>
+                        <mat-hint *ngIf="formUsuario.get('phone')!.touched && formUsuario.get('phone')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Website</mat-label>
+                        <input matInput formControlName="website"/>
+                        <mat-hint *ngIf="formUsuario.get('website')!.touched && formUsuario.get('website')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4">
+                    <div class="subtitulo">Datos de dirección: </div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Street</mat-label>
+                        <input matInput formControlName="street"/>
+                        <mat-hint *ngIf="formUsuario.get('street')!.touched && formUsuario.get('street')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Suite</mat-label>
+                        <input matInput formControlName="suite"/>
+                        <mat-hint *ngIf="formUsuario.get('suite')!.touched && formUsuario.get('suite')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>City</mat-label>
+                        <input matInput formControlName="city"/>
+                        <mat-hint *ngIf="formUsuario.get('city')!.touched && formUsuario.get('city')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Zipcode</mat-label>
+                        <input matInput formControlName="zipcode"/>
+                        <mat-hint *ngIf="formUsuario.get('zipcode')!.touched && formUsuario.get('zipcode')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Latitúd</mat-label>
+                        <input matInput formControlName="lat"/>
+                        <mat-hint *ngIf="formUsuario.get('lat')!.touched && formUsuario.get('lat')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Longitúd</mat-label>
+                        <input matInput formControlName="lng"/>
+                        <mat-hint *ngIf="formUsuario.get('lng')!.touched && formUsuario.get('lng')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4">
+                    <div class="subtitulo">Datos de la compañía: </div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="nameCompany"/>
+                        <mat-hint *ngIf="formUsuario.get('nameCompany')!.touched && formUsuario.get('nameCompany')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Bs</mat-label>
+                        <input matInput formControlName="bs"/>
+                        <mat-hint *ngIf="formUsuario.get('bs')!.touched && formUsuario.get('bs')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>CatchPhrase</mat-label>
+                        <input matInput formControlName="catchPhrase"/>
+                        <mat-hint *ngIf="formUsuario.get('catchPhrase')!.touched && formUsuario.get('catchPhrase')!.errors?.['required']" style="color: red;">Campo requerido</mat-hint>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="4">
+                    <button *ngIf="!id; else editar" mat-raised-button color="primary" [disabled]="formUsuario.invalid">Registrar</button>
+                    <ng-template #editar>
+                        <button mat-raised-button color="primary" [disabled]="formUsuario.invalid">Editar</button>
+                    </ng-template>
+                    <button mat-raised-button routerLink="/dashboard/usuarios">Volver</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card-content>
+    </form>
+    </mat-card>
+    <mat-card class="mapa__container">
+        <mat-card-content>
+            <iframe class="mapa" src="https://www.google.com/maps?q=Lima&output=embed"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </mat-card-content>
+    </mat-card>
+</div>
